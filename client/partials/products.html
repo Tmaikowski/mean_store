@@ -1,0 +1,18 @@
+<h1>Products</h1>
+<input type="text" placeholder="Filter..." ng-model="productsFilter"><br><br>
+<h3>Add a new product</h3>
+<form ng-submit="PC.create(newProduct)">
+  Name: <input type="text" ng-model="newProduct.name"><br>
+  Image (url): <input type="text" ng-model="newProduct.imgUrl"><br>
+  Description: <textarea ng-model="newProduct.description"></textarea><br>
+  Initial Quantity: <input type="number" ng-model="newProduct.quantity"><br>
+  <input type="submit" value="Create">
+</form>
+<div ng-init="PC.index()">
+  <div ng-repeat="product in PC.products | filter:productsFilter">
+    <img src="{{ product.imgUrl }}" width="300px" height="250px" /><br>
+    <p>{{ product.name }}</p>
+    <p>({{ product.quantity }} left)</p>
+    <hr>
+  </div>
+</div>

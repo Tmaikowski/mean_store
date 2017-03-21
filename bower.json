@@ -1,0 +1,22 @@
+{
+  "name": "mean_store",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Tmaikowski <Troy.maikowski@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.3",
+    "angular-route": "^1.6.3",
+    "angular-cookies": "^1.6.3"
+  }
+}

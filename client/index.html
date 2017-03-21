@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title>MEAN Store</title>
+    <script src="angular/angular.min.js"></script>
+    <script src="angular-route/angular-route.min.js"></script>
+    <script src="./config/routes.js"></script>
+    <script src="./factories/customer.js"></script>
+    <script src="./factories/product.js"></script>
+    <script src="./factories/order.js"></script>
+    <script src="./controllers/dashboard.js"></script>
+    <script src="./controllers/customers.js"></script>
+    <script src="./controllers/products.js"></script>
+    <script src="./controllers/orders.js"></script>
+  </head>
+  <body>
+    <a href="#!/">Dashboard</a> |
+    <a href="#!/products">Products</a> |
+    <a href="#!/orders">Orders</a> |
+    <a href="#!/customers">Customers</a> |
+    <a href="">Settings</a>
+    <div ng-view>
+    </div>
+  </body>
+</html>

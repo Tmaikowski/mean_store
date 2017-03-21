@@ -1,0 +1,21 @@
+<h1>Dashboard</h1>
+{{ DC.date.getTime() }}
+<h3>New Items</h3>
+<div ng-repeat="product in DC.recentProducts | orderBy:'-createdAt' | limitTo: 5">
+  <div>
+    <img src="{{ product.imgUrl }}" width="150" height="100" />
+    <p>{{ product.name }}</p>
+    <p>({{ product.quantity }} left) {{ product.createdAt }}</p>
+    <hr>
+  </div>
+</div>
+
+<h3>Recent Orders</h3>
+<p ng-repeat="order in DC.recentOrders | orderBy:'-createdAt' | limitTo: 5">
+  {{ order.customerName }} purchased {{ order.productQuantity }} {{ order.productName }}
+</p>
+
+<h3>New Customers</h3>
+<p ng-repeat="customer in DC.newCustomers | orderBy:'-createdAt' | limitTo: 5">
+  {{ customer.name }} joined the store. {{ customer.createdAt }}
+</p>
